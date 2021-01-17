@@ -3,7 +3,7 @@ import {Canvas} from 'react-three-fiber';
 import {OrbitControls, Stars} from 'drei';
 import {Physics, useBox, usePlane} from "use-cannon"; // pysics library : cannon js
 import './style.css';
-
+// work on appjs 1
 function Box() {
   const [ref, api] = useBox(() => ({mass: 1,  position:[0,2,0]}));
   return (
