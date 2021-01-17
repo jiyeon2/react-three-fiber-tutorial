@@ -1,5 +1,6 @@
 import React from 'react';
 import {Canvas} from 'react-three-fiber';
+import {OrbitControls} from 'drei';
 import './style.css';
 
 function Box() {
@@ -13,6 +14,7 @@ function Box() {
 export default function App() {
   return (
   <Canvas>
+    <OrbitControls/>
     <Box/>
   </Canvas>);
 }
