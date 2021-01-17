@@ -5,9 +5,11 @@ import {Physics, useBox, usePlane} from "use-cannon"; // pysics library : cannon
 import './style.css';
 
 function Box() {
-  const [ref] = useBox(() => ({mass: 1,  position:[0,2,0]}));
+  const [ref, api] = useBox(() => ({mass: 1,  position:[0,2,0]}));
   return (
-    <mesh ref={ref}>
+    <mesh onClick={() => {
+      api.velocity.set(0,2,0);
+    }} ref={ref}>
       <boxBufferGeometry attach="geometry"/>
       <meshLambertMaterial attach="material" color="hotpink"/>
     </mesh>
